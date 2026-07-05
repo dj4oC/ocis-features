@@ -1,0 +1,7 @@
+version = 1
+
+# Binary and config files that cannot carry inline SPDX headers
+[[annotations]]
+path = ["logo.png", ".nojekyll"]
+SPDX-FileCopyrightText = "2026 ownCloud GmbH"
+SPDX-License-Identifier = "Apache-2.0"

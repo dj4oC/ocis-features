@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 ownCloud GmbH
+# SPDX-License-Identifier: Apache-2.0
+
 # ownCloud Infinite Scale — Feature Library
 
 > Comprehensive catalog of 1,560 enterprise capabilities of ownCloud Infinite Scale (oCIS), the next-generation open-source content collaboration platform by ownCloud, a Kiteworks Company.
