@@ -3324,7 +3324,7 @@ let filtered=[...FEATURES],page=0,query='',capFilter='',campFilter='';
 function counter(id,n){const el=document.getElementById(id);if(!el)return;let v=0,step=Math.max(1,Math.ceil(n/55));const t=setInterval(()=>{v=Math.min(v+step,n);el.textContent=v.toLocaleString();if(v>=n)clearInterval(t);},16);}
 counter('sTotal',FEATURES.length);
 function esc(s){return(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function hi(s,q){const e=esc(s);if(!q)return e;const safe=esc(q).replace(/[.*+?^${}()|[\]\]/g,'\$&');return e.replace(new RegExp(`(${safe})`,'gi'),'<mark>$1</mark>');}
+function hi(s,q){const e=esc(s);if(!q)return e;const safe=esc(q).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');return e.replace(new RegExp(`(${safe})`,'gi'),'<mark>$1</mark>');}
 function cc(c){return CAP_COL[c]||'#4E85C8'}
 function cp(c){return CAMP_COL[c]||'#55606C'}
 function applyFilters(){const q=query.toLowerCase();filtered=FEATURES.filter(f=>{if(capFilter&&f.capability!==capFilter)return false;if(campFilter&&f.campaign!==campFilter)return false;if(q){const h=(f.name+' '+f.description+' '+f.category).toLowerCase();if(!h.includes(q))return false;}return true;});page=0;}
